@@ -104,11 +104,3 @@ body {
   object-fit: cover;
   opacity: 0.9;
 }
-
-.video-caption {
-  text-align: center;
-  margin-top: 10px;
-  font-size: 0.9rem;
-  color: var(--neon-purple);
-  text-shadow: 0 0 5px var(--neon-purple);
-}
