@@ -4,12 +4,69 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Мой первый сайт</title>
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Общие стили */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f0f0;
+      color: #333;
+      transition: background-color 0.4s ease;
+    }
+
+    header {
+      background-color: #4a6fa5;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    main {
+      padding: 2rem;
+      text-align: center;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 1rem;
+      background-color: #4a6fa5;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #3a5a80;
+    }
+
+    #message {
+      margin-top: 1rem;
+      font-style: italic;
+      color: #555;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
 </head>
 <body>
   <header>
     <h1>Добро пожаловать на мой сайт!</h1>
-    <p>Это простой пример сайта с HTML, CSS и JavaScript.</p>
+    <p>Это простой пример сайта с HTML, CSS и JavaScript — всё в одном файле.</p>
   </header>
 
   <main>
@@ -21,6 +78,20 @@
     <p>&copy; 2025 Мой сайт. Все права защищены.</p>
   </footer>
 
-  <script src="script.js"></script>
+  <script>
+    // Массив цветов для фона
+    const colors = ['#f0f0f0', '#ffeaa7', '#74b9ff', '#00b894', '#fd79a8', '#6c5ce7'];
+
+    const button = document.getElementById('colorBtn');
+    const message = document.getElementById('message');
+    let clickCount = 0;
+
+    button.addEventListener('click', () => {
+      const randomColor = colors[Math.floor(Math.random() * colors.length)];
+      document.body.style.backgroundColor = randomColor;
+      clickCount++;
+      message.textContent = `Цвет изменён ${clickCount} раз(а)!`;
+    });
+  </script>
 </body>
 </html>
